@@ -1,0 +1,120 @@
+<!-- 
+    Student: JingYi Li 
+    projects.html
+    Date of creating: Oct 25 2023
+    Description: This is the third page (project page)
+-->
+<!DOCTYPE html>
+<html lang="en">  
+<head>
+    <meta charset="UTF-8" />
+    <meta name="author" content="JingYi Li" />
+    <meta name="description" content="Assignment 1" />
+    <title>Contact</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="projects">
+    <header>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="resume.html">Resume</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <!-- projects set -->
+    <div id="projects">
+        <div id="title"></div>
+        <div id="name"></div>
+        <div id="description"></div>
+        <div id="techologies"></div>
+        <div id="details"></div>
+        <div id="image"></div>
+    <!-- the button -->
+    <button id="previous" type="button" class="button" onclick="getPreviousProjects()">&lt; Prev</button>
+    <button id="next" type="button" class="button" onclick="getNextProjects()">Next ></button>
+    </div>
+    <script >
+        const projects = [
+            {
+                title: "Project 1",
+                name: "Personal profile",
+                description: "A professional portfolio website showcasing a comprehensive display of programming proficiency and achievements.",
+                technologies: "Tech used: HTML, CSS, JavaScript",
+                details:"Created a well-designed, responsive, and functional personal website, effectively showcasing skills, experience, and projects. The attention to detail in styling and organization reflects a commitment to ensuring a positive user experience.",
+                images: "images/project01.png", // Update the image filename and extension
+            },
+            {
+                title: "Project 2",
+                name: "Joke of the Day",
+                description: "A fun-filled page that serves up random jokes to brighten your day!",
+                technologies: "Tech used: HTML, CSS, JavaScript",
+                details: "Crafted a vibrant web page, \"Joke of the Day,\" using HTML, CSS, and JavaScript. The page boasts an engaging design with gradient backgrounds and stylish fonts. It features a clean layout, a central content area for displaying random jokes and authors, and an interactive \"Get a Joke\" button. JavaScript dynamically fetches and presents jokes from an array, creating an enjoyable and responsive user experience. The design is mobile-friendly, and the code adheres to best practices for maintainability and modern development techniques. ",
+                images: "images/project02.png",
+            },
+            {
+                title: "Project 3",
+                name: "Travel Blog",
+                description: "Designed and implemented a dynamic and visually appealing travel blog webpage using HTML and CSS. Incorporated responsive design principles for optimal viewing on various devices. Created navigation links for seamless user experience and organized content into sections for clarity. Utilized Flexbox for layout structure and styled the page with a harmonious color scheme. Implemented a subscription form with HTML and CSS, enhancing user interaction. Applied media queries for responsiveness, ensuring the site adapts to different screen sizes. ",
+                technologies: "Tech used: HTML, CSS",
+                images: "images/project03.png",
+            },
+            {
+                title: "Project 4",
+                name: "Hometown",
+                description: "Designed and implemented a webpage showcasing hometown information using HTML and CSS, including embedded images for visual appeal. Utilized header tags to structure content and employed ordered and unordered lists for organized presentation. Incorporated metadata for improved SEO and created a hyperlink to navigate to a second page. Enhanced visual content with an image, providing context to the narrative.",
+                technologies: "Tech used: HTML",
+                images: "images/project04.png",
+            },
+        ];
+        
+        let currentProjectIndex = -1;
+
+        // Function to display the project details
+        function displayProject(projectIndex) {
+            const projectDisplay = document.getElementById("projects");
+            const project = projects[projectIndex];
+
+            // Update the HTML elements with project details
+            document.getElementById("title").textContent = project.title;
+            document.getElementById("name").textContent = project.name;
+            document.getElementById("description").textContent = project.description;
+            document.getElementById("techologies").textContent = project.technologies;
+            document.getElementById("details").textContent = project.details;
+            document.getElementById("image").innerHTML = `<img src="${project.images}" alt="${project.title}">`;
+
+        }
+
+        // To get the next project
+        function getNextProjects() {
+            currentProjectIndex = (currentProjectIndex + 1) % projects.length;
+            displayProject(currentProjectIndex);
+        }
+
+        // To get the previous project
+        function getPreviousProjects() {
+            currentProjectIndex = (currentProjectIndex - 1 + projects.length) % projects.length;
+            displayProject(currentProjectIndex);
+        }
+
+        // Display the first project initially
+        getNextProjects();
+    </script>
+
+    <footer>
+        <div class="footer">
+            <a href="https://www.linkedin.com/in/jing-yi-li-6784a5b2/"><img src="images/Linkedin.png" alt="LinkedIn" width="30" height="30"></a>
+            &nbsp; &nbsp; &nbsp;
+            <a href="https://github.com/jayalee140504"><img src="images/Git.png" alt="LinkedIn" width="30" height="30"></a>
+            <p>M: 416 - 8241654 &nbsp; &nbsp; / &nbsp; &nbsp; jayalee140504@gmali.com</p>
+        </div>
+        <div>
+            <p>JingYi, Sep 13 2023 Copyright</p>
+        </div>  
+    </footer>
+</body>
+</html>
+
+

@@ -1,0 +1,287 @@
+/*
+    Student: JingYi Li
+    File Name: style.css
+    Date of creating: Oct 25 2023
+    Description: This is for styling the website
+*/
+@import url('https://fonts.googleapis.com/css2?family=Varta:wght@400;700&display=swap');
+
+/* set the basic */
+body {
+    margin: 30px 100px;
+    padding: 0px;
+    font-family: 'Varta', sans-serif;
+    background-color: rgb(251, 251, 251);
+}
+
+footer {
+    text-align: center;
+}
+
+.home, .contact, .projects {
+    text-align: center;
+}
+
+/* style nav */
+header > nav {
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    text-align: center; /* Center the content horizontally */
+}
+
+header > nav > ul {
+    display: inline-block; /* Make the ul an inline block to center it horizontally */
+    vertical-align: middle; /* Center the ul vertically */
+    list-style: none;
+    padding: 0;
+}
+
+header > nav > ul > li {
+    display: inline-block;
+    padding: 20px; /* Adjust padding as needed */
+}
+
+header > nav > ul > li > a {
+    font-size: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    color: #003cff;
+    letter-spacing: 2px;
+}
+
+/* style the contents */
+body > h1 {
+    font-size: 80px;
+}
+
+body > img {
+    width: 250px;
+    border-radius: 50%; 
+    margin-top: 40px;
+}
+
+body > p {
+    font-size: 30px;
+    padding: 0px 250px;
+    color: rgb(77, 77, 77);
+}
+
+body > a {
+    text-decoration: none;
+    font-size: 25px;
+    color: cadetblue;
+}
+
+a:hover {
+    color: blue;
+}
+
+body > footer {
+    margin-top: 200px;
+    margin-bottom: 70px;
+}
+
+/* style resume page */
+.resume {
+    margin: 30px 300px;
+}
+
+.info {
+    font-size: 20px;
+    line-height: 2;
+    list-style: none;
+    padding: 0;
+    margin-bottom: 40px;
+}
+
+h1 {
+    margin-bottom: 0px;
+}
+
+.resumeList > h2 {
+    font-size: 40px;
+    margin-bottom: 0px;
+    margin-top: 50px;
+}
+
+.resumeList > p {
+    font-size: 25px;
+}
+
+.workEXList > p {
+    font-size: 25px;
+}
+
+.workEXList > ol > li {
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+.workEXList > ul > li {
+    font-size: 24px;
+    margin-left: 50px;
+}
+
+.skillsList, .educationList {
+    font-size: 25px;
+    margin-left: 50px;
+}
+
+.skillsList > p {
+    margin-left: 0px;
+}
+
+/* style contact page */
+.contact > form {
+    font-size: 25px;
+    text-align: left;
+    margin: 0 auto; /* Center the form horizontally */
+    max-width: 400px;
+    margin-top: 50px;
+}
+
+#contactname, #text, #email, #emailinput {
+    font-size: 25px;
+    margin-right: 10px;
+    width: 400px;
+    height: 30px;
+    border-color: rgb(111, 111, 111);
+    margin-bottom: 40px;
+}
+
+#text, #emailinput {
+    color: rgb(127, 134, 175);
+}
+
+#messageBox {
+    width: 100%; 
+    height: 150px; 
+    color: rgb(127, 134, 175);
+    font-size: 25px;
+    margin-bottom: 30px;
+}
+
+#submit {
+    color: white;
+    font-size: 20px;
+    border-radius: 20px;
+    padding: 10px 30px;
+    background-color: blue;
+}
+
+/* style projects page */
+body.projects {
+    text-align: center;
+}
+
+#projects {
+    text-align: left;
+    max-width: 1200px; /* Optional: Set a maximum width for the project content */
+    padding-top: 80px;
+    margin: auto; /* Center the block-level element horizontally */
+}
+
+#image img {
+    width: 100%; /* Make the image responsive to the width of its container */
+    padding: 20px 0px;
+    padding-bottom: 50px;
+}
+
+.button { /* button style */
+    color:rgb(93, 93, 93);
+    font-size: 40px;
+    border: none;
+    background: none;
+    letter-spacing: 2px;
+}
+
+.button:hover {
+    color: blue;
+}
+
+#previous {
+    float: left;
+}
+
+#next {
+    float: right;
+}
+
+#title { /* project content style */
+    padding-bottom: 10px;
+}
+
+#name { 
+    font-size: 40px;
+    font-weight: bold;
+    padding-bottom: 8px;
+}
+
+#description {
+    color: rgb(65, 65, 65);
+    font-size: 22px;
+}
+
+#techologies {
+    font-size: 22px;
+    color: rgb(95, 107, 160);
+    padding-top: 20px;
+    padding-bottom: 10px;
+}
+
+#details {
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+
+/* style footer */
+.footer {
+    font-size: 20px;
+    /* padding-bottom: 30px; */
+}
+
+.footer a:hover img {
+    opacity: 0.3; /* Adjust the opacity value for the desired effect */
+}
+
+@media screen and (max-width: 1500px) {
+    body {
+        margin: 50px 20px;
+    }
+    body > p {
+        padding: 0px 130px;
+    }
+
+    .resume {
+        margin: 30px 50px;
+    }
+
+    #projects {
+        text-align: left;
+        max-width: 80%;
+        padding-top: 80px;
+        margin: auto; /* Center the block-level element horizontally */
+    }
+}
+
+@media screen and (max-width: 635px) {
+    body {
+        margin: 50px 30px;
+    }
+    body > p {
+        padding: 0px 130px;
+    }
+
+    .resume {
+        margin: 30px 40px;
+    }
+
+    #projects {
+        text-align: left;
+        max-width: 80%;
+        padding-top: 80px;
+        margin: auto; /* Center the block-level element horizontally */
+    }
+}
