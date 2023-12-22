@@ -1,2 +1,2 @@
-![](introduction-1.jpg)
-![](introduction-2.jpg)
+![](images/introduction-1.jpg)
+![](images/introduction-2.jpg)
