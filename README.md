@@ -1,4 +1,5 @@
-I used only to do UI/UX design, and now I can code a website on my own, which is super fun 😆
+I used only to do UI/UX design, and now I can code a website on my own, which is super fun!
+
 ![](images/introduction-1.jpg)
 ![](images/introduction-2.jpg)
 ![](images/introduction-3.jpg)
